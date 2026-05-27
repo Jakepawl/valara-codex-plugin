@@ -1,0 +1,20 @@
+# OS + editor
+.DS_Store
+*.swp
+*~
+.vscode/
+.idea/
+
+# Node modules (defensive - this plugin has none but contributors may try)
+node_modules/
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# Test artifacts
+/tmp-validate/

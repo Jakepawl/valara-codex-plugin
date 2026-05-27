@@ -1,0 +1,21 @@
+{
+  "name": "valara-marketplace",
+  "interface": {
+    "displayName": "Valara"
+  },
+  "plugins": [
+    {
+      "name": "valara",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Jakepawl/valara-codex-plugin.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
