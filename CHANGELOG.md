@@ -6,7 +6,8 @@
 - Initial plugin manifest + .agents/plugins/marketplace.json + .mcp.json pointing at https://valara.cloud
 - 10 skill skeletons mirrored from valara-claude-plugin (canonical source)
 - Sync script (scripts/sync-from-claude-plugin.sh)
-- CI workflow with line-limit + forbidden-phrase + manifest-validation gates
+- Local pre-push git hook (`.githooks/pre-push`) running line-limit + forbidden-phrase + manifest-validation + mirror-integrity gates
+- `scripts/install-hooks.sh` (one-time setup pointing git at `.githooks/`)
 - MIT license
 
 ### Architecture

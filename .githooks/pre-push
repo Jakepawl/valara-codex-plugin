@@ -1,0 +1,24 @@
+#!/bin/bash
+# Local pre-push hook for valara-codex-plugin.
+#
+# Runs validate.sh (includes the mirror-integrity check against
+# valara-claude-plugin). This replaces the GitHub Actions workflow.
+#
+# Install once per clone: bash scripts/install-hooks.sh
+# Bypass once (NOT recommended): git push --no-verify
+
+set -euo pipefail
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPO_ROOT"
+
+echo "[pre-push] Running scripts/validate.sh..."
+if ! bash scripts/validate.sh; then
+  echo "[pre-push] FAIL: validate.sh exited non-zero. Push aborted." >&2
+  echo "[pre-push] If the mirror-integrity check failed, run:" >&2
+  echo "[pre-push]   bash scripts/sync-from-claude-plugin.sh" >&2
+  echo "[pre-push] to refresh skills/ from the canonical valara-claude-plugin source." >&2
+  exit 1
+fi
+
+echo "[pre-push] All gates passed. Proceeding with push."
