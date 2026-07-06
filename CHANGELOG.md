@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.2] - 2026-07-06
+
+### Fixed
+- MCP server URL repointed from the legacy `https://valara.cloud/api/v1/mcp/api` transport (removed server-side 2026-06-23) to the canonical `https://valara.cloud/api/v1/mcp` in `.mcp.json`. Mirrors valara-claude-plugin 0.1.2.
+
 ## [0.1.0] - 2026-05-27 (unreleased)
 
 ### Added
