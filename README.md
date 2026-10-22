@@ -1,13 +1,13 @@
 # Valara - Codex Plugin
 
-Connect [OpenAI Codex](https://openai.com/codex/) to your [Valara](https://valara.cloud) real-estate dashboard.
+Connect [OpenAI Codex](https://openai.com/codex/) to your [Valara](https://valara.si) real-estate dashboard.
 
 ## What you get
 
 - Browse your tours, check schedule, triage notifications, draft listing copy - all from Codex chat
 - OAuth 2.1 + PKCE with per-tool scope picking
 - Sandbox / live mode toggle (sandbox is the default for first-time users)
-- Per-user audit trail at https://valara.cloud
+- Per-user audit trail at https://valara.si
 
 ## Install in Codex
 
@@ -30,7 +30,7 @@ codex plugin add valara@valara-marketplace
 ## What's inside
 
 - 10 skills mirroring [`valara-claude-plugin`](https://github.com/Jakepawl/valara-claude-plugin) (the canonical source)
-- `.mcp.json` pointing at the hosted Valara MCP server at https://valara.cloud
+- `.mcp.json` pointing at the hosted Valara MCP server at https://valara.si
 - Codex-specific `.codex-plugin/plugin.json` + `.agents/plugins/marketplace.json` manifests
 
 The plugin is a thin wrapper. Rich agent guidance ships server-side via `_assistant_hint` on tool responses, so updates land via the Valara backend - no plugin re-install needed.
@@ -45,4 +45,4 @@ MIT - see [LICENSE](./LICENSE).
 
 ## Maintainer
 
-[Jacob Allen Media](https://valara.cloud) - support@jacoballenmedia.com
+[Jacob Allen Media](https://valara.si) - support@jacoballenmedia.com
